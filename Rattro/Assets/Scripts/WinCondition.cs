@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Needed for scene management
+using UnityEngine.SceneManagement; 
 
 public class WinCondition : MonoBehaviour
 {
@@ -38,6 +38,6 @@ public class WinCondition : MonoBehaviour
 
     void LoadSceneByIndex(int sceneIndex)
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(sceneIndex);
     }
 }

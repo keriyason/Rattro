@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameplay.unity
     guid: eb994bb4ba88cc44ebdc39ab117f9daf
+  - enabled: 1
+    path: Assets/Scenes/Cheese Maze.unity
+    guid: 8936252ab7bdd73439e3df131dd20b86
   m_configObjects: {}
