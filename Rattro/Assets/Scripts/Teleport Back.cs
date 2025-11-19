@@ -11,7 +11,7 @@ public class TeleportBack : MonoBehaviour
 
     [Header("References")]
     public Transform player;
-    public GameObject interactPromptUI; // Assign a UI Text or Canvas group in the Inspector
+    public GameObject interactPromptUI;
 
     [Header("Teleport Settings")]
     public Vector3 teleportLocation = new Vector3(10f, 1.5f, -5f);
@@ -19,19 +19,20 @@ public class TeleportBack : MonoBehaviour
     [Header("Input Settings")]
     public KeyCode interactKey = KeyCode.E;
 
-    private bool hasTeleported = false;
+    private bool isInZone = false;
 
     void Update()
     {
-        if (hasTeleported) return;
-
         float distanceToWin = Vector3.Distance(player.position, winPoint);
 
-        // Show prompt if close enough
         if (distanceToWin <= winDistance)
         {
-            if (interactPromptUI != null)
-                interactPromptUI.SetActive(true);
+            if (!isInZone)
+            {
+                isInZone = true;
+                if (interactPromptUI != null)
+                    interactPromptUI.SetActive(true);
+            }
 
             if (Input.GetKeyDown(interactKey))
             {
@@ -40,14 +41,17 @@ public class TeleportBack : MonoBehaviour
         }
         else
         {
-            if (interactPromptUI != null)
-                interactPromptUI.SetActive(false);
+            if (isInZone)
+            {
+                isInZone = false;
+                if (interactPromptUI != null)
+                    interactPromptUI.SetActive(false);
+            }
         }
     }
 
     void TeleportPlayer()
     {
-        hasTeleported = true;
         Debug.Log("You pressed E near the Kitchen! Teleporting...");
         player.position = teleportLocation;
 
@@ -62,3 +66,4 @@ public class TeleportBack : MonoBehaviour
         }
     }
 }
+

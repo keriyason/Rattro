@@ -76,7 +76,11 @@ public class GameManager : MonoBehaviour
         winScreen.SetActive(true);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
+
+        // Start scene transition after win
+        StartCoroutine(SceneLoadTimer(4)); // Replace '2' with your desired scene index
     }
+
 
     //
     // Provided Functions
