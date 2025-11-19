@@ -3588,6 +3588,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1007451526}
     - target: {fileID: 6071771859757449423, guid: a11ed1a76b910914cad379f009c8a3ea, type: 3}
+      propertyPath: walkSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6071771859757449423, guid: a11ed1a76b910914cad379f009c8a3ea, type: 3}
       propertyPath: sprintBarBG
       value: 
       objectReference: {fileID: 1291808643}
