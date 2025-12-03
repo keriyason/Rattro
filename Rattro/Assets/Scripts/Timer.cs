@@ -14,21 +14,10 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        timerIsRunning = false;
+        timerIsRunning = true;
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        
-        if (other.CompareTag("Player"))
-        {
-            if (!timerIsRunning) 
-            {
-                timerIsRunning = true;
-                Debug.Log("Timer started!");
-            }
-        }
-    }
+   
     void Update()
     {
         if (timerIsRunning)
