@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
         Cursor.visible = true;
 
         // Start scene transition after win
-        StartCoroutine(SceneLoadTimer(4)); // Replace '2' with your desired scene index
+        StartCoroutine(SceneLoadTimer(3)); // Replace '2' with your desired scene index
     }
 
 
