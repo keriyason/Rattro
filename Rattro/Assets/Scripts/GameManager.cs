@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         blackScreenImage.color = Color.clear;
-        countText.text = "Collected: 0";
+        countText.text = "Collected: 0/" + winCount;
     }
 
     // Update is called once per frame
@@ -58,16 +58,15 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Add to the Collectible Count!");
 
-        // ++ adds one to the current value of an int variable
         collectibleCount++;
-        countText.text = "Collected: " + collectibleCount.ToString();
-        Debug.Log($"New Collectible Count is {collectibleCount}");
+        countText.text = "Collected: " + collectibleCount + "/" + winCount; // shows current/total
+        Debug.Log($"New Collectible Count is {collectibleCount}/{winCount}");
 
-        // We've collected a new collectible! Do we have enough collectibles to win the game?
-        if (collectibleCount == winCount)
+        if (collectibleCount >= winCount)  
         {
             GameOver();
         }
+
     }
 
     private void GameOver()

@@ -5,20 +5,21 @@ using UnityEngine;
 public class TeleportScript : MonoBehaviour
 {
     [Header("Win Condition Settings")]
-    public Vector3 winPoint = new Vector3(2.15f, 1.24f, -1.64f); // Target position
-    public float winDistance = 2.0f; // Distance threshold to trigger teleport
+    public Transform winPoint; // player goes to this GOs point
+    public float winDistance = 2.0f; //area threshhold for teleport distance
 
     [Header("References")]
-    public Transform player; // Assign your player transform in the Inspector
+    public Transform player;
 
     [Header("Teleport Settings")]
-    public Vector3 teleportLocation = new Vector3(10f, 1.5f, -5f); // New location to teleport player
-
+    public Transform teleportTarget; // teleport location
     private bool isInZone = false;
 
     void Update()
     {
-        float distanceToWin = Vector3.Distance(player.position, winPoint);
+        if (player == null || winPoint == null) return;
+
+        float distanceToWin = Vector3.Distance(player.position, winPoint.position);
 
         if (distanceToWin <= winDistance)
         {
@@ -31,15 +32,21 @@ public class TeleportScript : MonoBehaviour
         }
         else
         {
-            isInZone = false; // Reset when player leaves the zone
+            isInZone = false;
         }
     }
 
     void TeleportPlayer()
     {
-        player.position = teleportLocation;
+        if (teleportTarget == null)
+        {
+            Debug.LogError("Teleport target not assigned in Inspector!");
+            return;
+        }
 
-        // Optional: reset velocity if using Rigidbody
+        player.position = teleportTarget.position;
+
+       
         Rigidbody rb = player.GetComponent<Rigidbody>();
         if (rb != null)
         {
@@ -48,6 +55,7 @@ public class TeleportScript : MonoBehaviour
         }
     }
 }
+
 
 
 
