@@ -2499,6 +2499,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 26a91b624235f92489a47fd4b1d96bb2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 080427213a61be747ae3bd16542f25a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 26a91b624235f92489a47fd4b1d96bb2, type: 3}
       propertyPath: m_Name
       value: Floor V2 (4)
@@ -3103,6 +3107,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 26a91b624235f92489a47fd4b1d96bb2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 080427213a61be747ae3bd16542f25a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 26a91b624235f92489a47fd4b1d96bb2, type: 3}
       propertyPath: m_Name
       value: Floor V2 (1)
@@ -4463,6 +4471,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 26a91b624235f92489a47fd4b1d96bb2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 080427213a61be747ae3bd16542f25a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 26a91b624235f92489a47fd4b1d96bb2, type: 3}
       propertyPath: m_Name
       value: Floor V2 (2)
@@ -5812,6 +5824,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 26a91b624235f92489a47fd4b1d96bb2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 080427213a61be747ae3bd16542f25a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 26a91b624235f92489a47fd4b1d96bb2, type: 3}
       propertyPath: m_Name
       value: Floor V2 (3)
@@ -7048,6 +7064,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 26a91b624235f92489a47fd4b1d96bb2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 080427213a61be747ae3bd16542f25a0, type: 2}
     - target: {fileID: 919132149155446097, guid: 26a91b624235f92489a47fd4b1d96bb2, type: 3}
       propertyPath: m_Name
       value: Floor V2
@@ -7581,7 +7601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1991796822
 BoxCollider:
   m_ObjectHideFlags: 0
